@@ -1,4 +1,4 @@
-# Kubernetes Security MTech Lab
+# Kubernetes Security Lab
 
 This repository contains lab files for validating Kubernetes security controls on a 1-control-plane/2-worker cluster.
 
