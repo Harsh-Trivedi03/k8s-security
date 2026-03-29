@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: privileged-test
+  namespace: psa-demo
+spec:
+  containers:
+  - name: c1
+    image: nginx:1.27
+    securityContext:
+      privileged: true

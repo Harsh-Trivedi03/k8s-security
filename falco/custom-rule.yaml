@@ -1,0 +1,8 @@
+customRules:
+  rules-custom.yaml: |-
+    - rule: Shell In Container
+      desc: Detect shell execution inside a container
+      condition: evt.type=execve and (proc.name in (bash, sh, dash, zsh))
+      output: Shell spawned in container (user=%user.name proc=%proc.name cmd=%proc.cmdline container=%container.name)
+      priority: WARNING
+      tags: [container, execution]

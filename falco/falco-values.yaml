@@ -1,0 +1,10 @@
+customRules:
+  custom-rules.yaml: |
+    - rule: Detect Shell Spawn In Container
+      desc: Detect shell process in container
+      condition: evt.type = execve and container and proc.name in (sh, bash)
+      output: Shell spawned in container user=%user.name proc=%proc.name container=%container.name
+      priority: WARNING
+      tags: [custom, container]
+falcosidekick:
+  enabled: false
